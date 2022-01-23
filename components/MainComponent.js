@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Home from './HomeComponent'
 import Directory from './DirectoryComponent'
 import CampsiteInfo from './CampsiteInfoComponent'
+import About from './AboutComponent'
+import Contact from './ContactComponent'
 import Constants from 'expo-constants'
 import { View, Platform } from 'react-native'
 import { createStackNavigator } from 'react-navigation-stack'
@@ -31,6 +33,23 @@ const DirectoryNavigator = createStackNavigator(
 const HomeNavigator = createStackNavigator(
   {
     Home: { screen: Home },
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#5637DD',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        color: '#fff',
+      },
+    },
+  }
+)
+
+const AboutNavigator = createStackNavigator(
+  {
+    About: { screen: About },
   },
   {
     defaultNavigationOptions: {
