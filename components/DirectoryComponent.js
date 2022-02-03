@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, FlatList } from 'react-native'
+import { View, FlatList, Text } from 'react-native'
 import { Tile } from 'react-native-elements'
 import { connect } from 'react-redux'
 import { baseUrl } from '../shared/baseUrl'
@@ -22,7 +22,7 @@ class Directory extends Component {
 
     const renderDirectoryItem = ({ item }) => {
       return (
-        <Animatable.View animation="fadeInDown" duration={2000} delay={1000}>
+        <Animatable.View animation="fadeInRightBig" duration={2000}>
           <Tile
             title={item.name}
             caption={item.description}
